@@ -3,10 +3,13 @@
 set -e
 
 echo "Fetching resumes..."
-./resume-import main.go
+./resume-import
 
 echo "Moving to hiring folder..."
-mkdir -p ~/Downloads/hiring/
-mv ./attachments/backend/* ~/Downloads/hiring/
+FILESCOUNT=$(ls -l ./attachments/backend/ | wc -l)
+if [ "$FILESCOUNT" -gt "0" ]; then
+    mkdir -p ~/Downloads/hiring/
+    mv ./attachments/backend/* ~/Downloads/hiring/
+fi
 
 echo "Done."

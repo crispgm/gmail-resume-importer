@@ -3,7 +3,7 @@
 set -e
 
 echo "Fetching resumes..."
-go run main.go
+./resume-import main.go
 
 echo "Moving to hiring folder..."
 mkdir -p ~/Downloads/hiring/

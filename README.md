@@ -10,6 +10,12 @@ Not for common use. You may modify and use at your own risk.
 2. Create New Label: `bot-downloaded` under `job-resumes`
 3. Run and authorize with OAuth 2.0
 
+## Installation
+
+1. Clone the repo
+2. Build with: `go build -o resume-import`
+3. Run `fetch.sh`
+
 ## Usage
 
 Show labels:

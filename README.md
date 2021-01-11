@@ -2,6 +2,8 @@
 
 Read the unread hiring mails and import attachments automatically from Gmail.
 
+Not for common use. You may modify and use at your own risk.
+
 ## Prerequisite
 
 1. Create New Label: `job-resumes`

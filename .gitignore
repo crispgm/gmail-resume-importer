@@ -1,0 +1,6 @@
+*.pdf
+*.doc
+*.docx
+token.json
+.DS_Store
+credentials.json

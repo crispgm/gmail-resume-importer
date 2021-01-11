@@ -70,8 +70,8 @@ func main() {
 			msg, _ := srv.Users.Messages.Get(user, m.Id).Do()
 			subject := getFromHeader(msg.Payload.Headers, "Subject")
 			resumeType := validZhipinResumeMessage(subject)
+			batchMsgID = append(batchMsgID, m.Id)
 			if resumeType == 1 {
-				batchMsgID = append(batchMsgID, m.Id)
 				var attID, attName string
 				parts := msg.Payload.Parts
 				for _, p := range parts {

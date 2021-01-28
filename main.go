@@ -16,6 +16,7 @@ import (
 var (
 	showLabels = false
 	user       = "me"
+	readLabel  = "Label_3754174685129828981"
 )
 
 func main() {
@@ -99,7 +100,7 @@ func main() {
 		fmt.Println("Batch Read and Label for", batchMsgID)
 		batchModifyReq := &gmail.BatchModifyMessagesRequest{
 			Ids:            batchMsgID,
-			AddLabelIds:    []string{"Label_3754174685129828981"},
+			AddLabelIds:    []string{readLabel},
 			RemoveLabelIds: []string{"UNREAD"},
 		}
 		err = srv.Users.Messages.BatchModify(user, batchModifyReq).Do()
